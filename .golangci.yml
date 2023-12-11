@@ -1,0 +1,14 @@
+linters-settings:
+  golint:
+    enabled: true
+  govet:
+    enabled: true
+  errcheck:
+    enabled: true
+  gocyclo:
+    enabled: true
+    min-complexity: 10
+  unused:
+    enabled: true
+  deadcode:
+    enabled: true
