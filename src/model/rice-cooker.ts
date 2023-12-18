@@ -3,7 +3,7 @@ import { Ingredients } from "../constants/ingredients";
 import { show } from "../utils/show";
 
 export class RiceCooker {
-    private isCooking: boolean = false;
+    public isCooking: boolean = false;
     private temperature: string = "32";
     public hasWater = false;
 

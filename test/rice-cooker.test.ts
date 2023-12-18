@@ -1,9 +1,13 @@
 import { RiceCooker } from '../src/model/rice-cooker';
-import mockStdin from 'mock-stdin';
 
 describe('Rice cooker app', () => {
 
-  it('should call addWater when user choose 1', async () => {
+  it('should not have water', async () => {
+    const riceCooker = new RiceCooker();
+    expect(riceCooker.hasWater).toEqual(false);
+  });
+
+  it('should have water', async () => {
     const riceCooker = new RiceCooker();
     riceCooker.addWater();
     expect(riceCooker.hasWater).toEqual(true);
@@ -17,5 +21,21 @@ describe('Rice cooker app', () => {
     jest.runOnlyPendingTimers();
     await promise;
     expect(riceCooker.hasWater).toEqual(false);
+  });
+
+  it('should reheat ronono successfully', async () => {
+    const riceCooker = new RiceCooker();
+    jest.useFakeTimers();
+    riceCooker.addWater();
+    const promise = riceCooker.startReheating('ronono');
+    jest.runOnlyPendingTimers();
+    await promise;
+    expect(riceCooker.hasWater).toEqual(false);
+  });
+
+  it('should not cooking', async () => {
+    const riceCooker = new RiceCooker();
+    riceCooker.stopCooking();
+    expect(riceCooker.isCooking).toEqual(false);
   });
 });
