@@ -6,6 +6,8 @@ require_relative '../constants/INGREDIENTS'
 
 # This class represents a rice cooker and provides methods for cooking and reheating.
 class RiceCooker
+  attr_reader :has_water
+
   def initialize
     @is_cooking = false
     @temperature = '32'
@@ -92,7 +94,7 @@ class RiceCooker
 
       if limit > cooking_time
         show("\n Le riz n'est pas assez cuit, il manque du temps (Appuyer sur Entrée) \n")
-      elsif (cooking_time > limit - 1) && (limit + 2 > cookingTime)
+      elsif (cooking_time > limit - 1) && (limit + 2 > cooking_time)
         show("\n Le riz est cuit (Appuyer sur Entrée) \n")
       else
         show("\n Trop longtemps, le riz est brûlé (Appuyer sur Entrée) \n")
