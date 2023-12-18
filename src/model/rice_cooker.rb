@@ -7,6 +7,7 @@ require_relative '../constants/INGREDIENTS'
 # This class represents a rice cooker and provides methods for cooking and reheating.
 class RiceCooker
   attr_reader :has_water
+  attr_reader :is_cooking
 
   def initialize
     @is_cooking = false
