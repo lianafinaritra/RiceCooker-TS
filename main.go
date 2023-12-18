@@ -33,7 +33,7 @@ func app() {
 		case "2":
 			clearConsole()
 			if !riceCooker.HasWater() {
-				fmt.Println("\n Il faut ajouter de l'eau avant de cuire \n")
+				fmt.Println("\n Il faut ajouter de l'eau avant de cuire")
 			} else {
 				var elementType string
 				fmt.Print("Que voulez cuire ? (vary gasy/vary mena/tsipala): ")
@@ -55,7 +55,7 @@ func app() {
 		case "3":
 			clearConsole()
 			if !riceCooker.HasWater() {
-				fmt.Println("\n Il faut ajouter de l'eau avant de réchauffer \n")
+				fmt.Println("\n Il faut ajouter de l'eau avant de réchauffer")
 			} else {
 				var elementType string
 				fmt.Print("Que voulez réchauffer ? (ronono/vary/laoka): ")
@@ -76,7 +76,7 @@ func app() {
 			return
 		default:
 			clearConsole()
-			fmt.Println("\n Choix non valide. Veuillez saisir un chiffre de 1 à 5 ou 0. \n")
+			fmt.Println("\n Choix non valide. Veuillez saisir un chiffre de 1 à 5 ou 0.")
 		}
 	}
 }
