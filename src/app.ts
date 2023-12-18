@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { show } from "./utils/show";
 import { RiceCooker } from './model/rice-cooker';
 
-const app = async() => {
+export const app = async() => {
     let choice;
     const riceCooker = new RiceCooker();
     while (true) {
