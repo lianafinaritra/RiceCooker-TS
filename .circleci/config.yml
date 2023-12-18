@@ -12,6 +12,9 @@ jobs:
             gem install bundler
             bundle install
       - run:
+          name: Display contents of src/constants/
+          command: ls -R src/constants/
+      - run:
           name: Run tests
           command: |
             rspec
