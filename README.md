@@ -37,3 +37,11 @@ In this project, the linter used is eslint and the project follows ECMAScript st
 * Run the linter
   ```ssh
     npm run lint
+
+    ### Linter
+
+In this project, we use Jest to test the app.
+
+* Run the test
+  ```ssh
+    npm test
